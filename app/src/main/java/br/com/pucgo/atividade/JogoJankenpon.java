@@ -17,7 +17,7 @@ public class JogoJankenpon extends AppCompatActivity {
 
     ImageView oponente, jogador;
     Button pedra, papel, tesoura, voltar;
-    String jogadaOponente, jogadaJogador, resultado;
+    String jogadaJogador, resultado;
     Random valor;
 
     @Override
@@ -67,37 +67,24 @@ public class JogoJankenpon extends AppCompatActivity {
         int valorSorteado = valor.nextInt(3);
         switch (valorSorteado){
             case 0:
-                jogadaOponente = "pedra";
                 oponente.setImageResource(R.drawable.rock);
                 break;
             case 1:
-                jogadaOponente = "papel";
                 oponente.setImageResource(R.drawable.paper);
                 break;
             case 2:
-                jogadaOponente = "tesoura";
                 oponente.setImageResource(R.drawable.scissors);
                 break;
         }
 
-        if(jogadaJogador.equals("pedra") && jogadaOponente.equals("papel")){
-            resultado = "Você perdeu!";
-        } else if(jogadaJogador.equals("pedra") && jogadaOponente.equals("tesoura")){
-            resultado = "Você ganhou!";
-        } else if(jogadaJogador.equals("papel") && jogadaOponente.equals("pedra")){
-            resultado = "Você ganhou!";
-        } else if(jogadaJogador.equals("papel") && jogadaOponente.equals("tesoura")){
-            resultado = "Você perdeu!";
-        } else if(jogadaJogador.equals("tesoura") && jogadaOponente.equals("papel")){
-            resultado = "Você ganhou!";
-        } else if(jogadaJogador.equals("tesoura") && jogadaOponente.equals("pedra")){
-            resultado = "Você perdeu!";
-        } else if(jogadaJogador.equals("pedra") && jogadaOponente.equals("pedra")){
-            resultado = "Empate!";
-        } else if(jogadaJogador.equals("papel") && jogadaOponente.equals("papel")){
-            resultado = "Empate!";
-        } else if(jogadaJogador.equals("tesoura") && jogadaOponente.equals("tesoura")){
-            resultado = "Empate!";
+        TipoJogada jogador = TipoJogada.getEnumByNome(jogadaJogador);
+        TipoJogada oponente = TipoJogada.getEnumByCodigo(valorSorteado);
+
+        Boolean julga = jogador.julga(oponente);
+        if(null == julga){
+            resultado = "Empate";
+        } else{
+            resultado = julga ? "Voce Ganhou!" : "Voce Perdeu";
         }
 
         Toast.makeText(JogoJankenpon.this, resultado, Toast.LENGTH_LONG).show();
