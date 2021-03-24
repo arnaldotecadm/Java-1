@@ -42,13 +42,6 @@ public class InversorDePalavras extends AppCompatActivity {
             }
         });
 
-        voltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(InversorDePalavras.this, Menu.class);
-                startActivity(i);
-                finish();
-            }
-        });
+        voltar.setOnClickListener(v -> finish());
     }
 }

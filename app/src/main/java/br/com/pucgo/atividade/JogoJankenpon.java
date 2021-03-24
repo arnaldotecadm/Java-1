@@ -59,14 +59,7 @@ public class JogoJankenpon extends AppCompatActivity {
             }
         });
 
-        voltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(JogoJankenpon.this, Menu.class);
-                startActivity(i);
-                finish();
-            }
-        });
+        voltar.setOnClickListener(v -> finish());
 
     }
 

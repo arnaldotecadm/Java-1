@@ -85,12 +85,11 @@ public class SorteadorDeValores extends AppCompatActivity {
             }
         });
 
-        voltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(SorteadorDeValores.this, Menu.class);
-                startActivity(i);
-                finish();
+        voltar.setOnClickListener(v -> {
+            try {
+                finalize();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
             }
         });
     }
