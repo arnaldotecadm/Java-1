@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="66">
+
+        <TextView
+            android:id="@+id/textoContador"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="10"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Contador"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/textoDataEvento"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="10"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Data"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textoNomeEvento"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="33.4"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Evento"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="22dp" />
+
+
+
+</LinearLayout>
+
+

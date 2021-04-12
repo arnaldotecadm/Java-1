@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#CDDC39">
+    <TextView
+        android:id="@+id/tituloInvertido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tudo pronto!"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/descricao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confira abaixo o resultado:"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tituloInvertido"
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        ></TextView>
+
+    <EditText
+        android:id="@+id/textoInvertido"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_below="@+id/descricao2"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        ></EditText>
+
+
+    <Button
+        android:id="@+id/botaoVoltar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_below="@+id/textoInvertido"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="10dp"
+        ></Button>
+</RelativeLayout>

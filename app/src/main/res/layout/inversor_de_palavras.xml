@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#CDDC39">
+
+    <TextView
+        android:id="@+id/tituloInverter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inverter Texto"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite ou cole o texto no campo abaixo:"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tituloInverter"
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        ></TextView>
+
+    <EditText
+        android:id="@+id/textoInverter"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_below="@+id/descricao"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        ></EditText>
+
+    <Button
+        android:id="@+id/btnInverter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inverter Texto"
+        android:layout_below="@+id/textoInverter"
+        android:layout_marginTop="14dp"
+        android:layout_centerHorizontal="true"
+        ></Button>
+
+
+    <Button
+        android:id="@+id/botaoVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_below="@+id/btnInverter"
+        android:layout_marginTop="340dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="10dp"
+        ></Button>
+
+
+</RelativeLayout>

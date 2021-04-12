@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#EABF40">
+
+    <TextView
+        android:id="@+id/tituloRegistroDeEventos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eventos"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"></TextView>
+
+    <EditText
+        android:id="@+id/nomeEvento"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tituloRegistroDeEventos"
+        android:textSize="20dp"
+        android:hint="Digite o nome do evento"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/dataEvento"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:hint="Selecione a data"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/nomeEvento"
+        android:inputType="date"
+        ></EditText>
+
+    <Button
+        android:id="@+id/btnRegistrarEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar Evento"
+        android:layout_below="@+id/dataEvento"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="10dp"
+        ></Button>
+
+    <ListView
+        android:id="@+id/eventos"
+        android:layout_width="wrap_content"
+        android:layout_height="380dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/btnRegistrarEvento"
+        ></ListView>
+
+    <Button
+        android:id="@+id/btnVoltarEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_below="@+id/eventos"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="10dp"
+        ></Button>
+
+</RelativeLayout>

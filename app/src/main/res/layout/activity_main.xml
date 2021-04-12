@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFEA00">
+
+    <TextView
+        android:id="@+id/atividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avaliação 01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="28dp"
+        android:textColor="#000000"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="266dp"
+        android:layout_height="195dp"
+        android:src="@drawable/logofacu"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/atividade"
+        android:layout_centerHorizontal="true"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/nomeAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Antônio Marcelino"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_below="@id/logo"
+        android:textSize="14dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/matriculaAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desenvolvedor Java"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/nomeAluno"
+        android:textSize="14dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/cursoAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Análise e Desenvolvimento de Sistemas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/matriculaAluno"
+        android:textSize="14dp"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/entrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_below="@id/cursoAluno"
+        android:layout_centerHorizontal="true"
+        android:text="ENTRAR"
+        android:backgroundTint="#2196F3"
+        ></Button>
+
+</RelativeLayout>

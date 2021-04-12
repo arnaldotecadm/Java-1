@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFC107"
+    android:backgroundTint="#ffea00">
+
+   <TextView
+       android:id="@+id/tituloJankenpo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:textSize="50dp"
+       android:textColor="@color/black"
+       android:textStyle="bold"
+       android:layout_marginTop="40dp"
+       android:text="JanKenPo"></TextView>
+
+    <ImageView
+        android:id="@+id/oponente"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tituloJankenpo"
+        android:src="@drawable/rock"></ImageView>
+
+    <ImageView
+        android:id="@+id/jogador"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/oponente"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/rock"></ImageView>
+
+    <Button
+        android:id="@+id/btnPedra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PEDRA"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/jogador"
+        android:layout_marginLeft="40dp"
+        android:backgroundTint="@color/black"
+        ></Button>
+
+    <Button
+        android:id="@+id/btnPapel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAPEL"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/jogador"
+        android:layout_toRightOf="@+id/btnPedra"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="@color/black"
+        ></Button>
+
+    <Button
+        android:id="@+id/btnTesoura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TESOURA"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/jogador"
+        android:layout_toRightOf="@+id/btnPapel"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="@color/black"
+        ></Button>
+
+    <Button
+        android:id="@+id/btnVoltar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/btnPapel"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#03A9F4"
+        ></Button>
+
+
+
+</RelativeLayout>
