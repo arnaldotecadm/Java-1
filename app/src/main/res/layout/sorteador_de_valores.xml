@@ -1,119 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#F4FBEB">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tituloSorteadorDeValores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sorteador de Valores"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:textSize="28dp"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        ></TextView>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4FBEB">
+
+        <TextView
+            android:id="@+id/tituloSorteadorDeValores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Sorteador de Valores"
+            android:textColor="#000000"
+            android:textSize="28dp"
+            android:textStyle="bold"></TextView>
 
 
-    <TextView
-        android:id="@+id/textoDescritivo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pressione o botão abaixo para gerar um número aleatório quer será apresentado na tela. Caso queira pode escolher uma faixa de valores."
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="45dp"
-        android:layout_below="@+id/tituloSorteadorDeValores"
-        android:textSize="14dp"
-        android:textColor="#434242"
-        android:textStyle="bold"
-        ></TextView>
-    <TextView
-        android:id="@+id/textoValorMinimo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Valor Mínimo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/textoDescritivo"
-        android:textSize="14dp"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        ></TextView>
-    <EditText
-        android:id="@+id/valorMinimo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Escolha o valor mínimo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/textoValorMinimo"
-        android:textSize="14dp"
-        android:backgroundTint="#00BCD4"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        android:inputType="number"
-        ></EditText>
+        <TextView
+            android:id="@+id/textoDescritivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tituloSorteadorDeValores"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"
+            android:text="Pressione o botão abaixo para gerar um número aleatório quer será apresentado na tela. Caso queira pode escolher uma faixa de valores."
+            android:textColor="#434242"
+            android:textSize="14dp"
+            android:textStyle="bold"></TextView>
 
-    <TextView
-        android:id="@+id/textoValorMaximo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Valor Máximo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/valorMinimo"
-        android:textSize="14dp"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        ></TextView>
-    <EditText
-        android:id="@+id/valorMaximo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Escolha o valor máximo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/textoValorMaximo"
-        android:textSize="14dp"
-        android:backgroundTint="#00BCD4"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        android:inputType="number"
-        ></EditText>
-    <Button
-        android:id="@+id/sortearValores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/valorMaximo"
-        android:layout_centerHorizontal="true"
-        android:text="SORTEAR"
-        android:backgroundTint="#2196F3"
-        ></Button>
-    <TextView
-        android:id="@+id/valorSorteado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:layout_below="@+id/sortearValores"
-        android:textSize="80dp"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        ></TextView>
-    <Button
-        android:id="@+id/btnVoltar1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_below="@id/valorSorteado"
-        android:layout_marginLeft="40dp"
-        android:text="Voltar"
-        android:textSize="10dp"
-        android:backgroundTint="#2196F3"
-        ></Button>
+        <TextView
+            android:id="@+id/textoValorMinimo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoDescritivo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Valor Mínimo"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            android:textStyle="bold"></TextView>
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/valorMinimo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoValorMinimo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#00BCD4"
+            android:hint="Escolha o valor mínimo"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            android:textStyle="bold"></EditText>
+
+        <TextView
+            android:id="@+id/textoValorMaximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valorMinimo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Valor Máximo"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            android:textStyle="bold"></TextView>
+
+        <EditText
+            android:id="@+id/valorMaximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoValorMaximo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#00BCD4"
+            android:hint="Escolha o valor máximo"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            android:textStyle="bold"></EditText>
+
+        <Button
+            android:id="@+id/sortearValores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/valorMaximo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#2196F3"
+            android:text="SORTEAR"></Button>
+
+        <TextView
+            android:id="@+id/valorSorteado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sortearValores"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="80dp"
+            android:textStyle="bold"></TextView>
+
+        <Button
+            android:id="@+id/btnVoltar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/valorSorteado"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="#2196F3"
+            android:text="Voltar"
+            android:textSize="10dp"></Button>
+
+    </RelativeLayout>
+</ScrollView>
