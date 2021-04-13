@@ -35,6 +35,8 @@ public class RegistroDeEventos extends AppCompatActivity {
     @BindView(R.id.eventos)
     ListView eventos;
 
+    private ArrayList<Evento> eventosRegistrados = new ArrayList<>();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +45,8 @@ public class RegistroDeEventos extends AppCompatActivity {
         // Isso aqui faz a magica da ligacao entre componente da tela e as propriedades
         ButterKnife.bind(this);
 
-
-        ArrayList<Evento> eventosRegistrados = new ArrayList<>();
-        //eventosRegistrados.add(new Evento(1, "Aula 1", "01/02/2000"));
-        //eventosRegistrados.add(new Evento(2, "Aula 2", "02/02/2000"));
         Adaptador adaptador = new Adaptador(this, R.layout.eventos, eventosRegistrados);
+
         eventos.setAdapter(adaptador);
 
         /**
@@ -91,7 +90,7 @@ public class RegistroDeEventos extends AppCompatActivity {
 
         datePicker = (view, year, month, dayOfMonth) -> {
             month += 1;
-            String dataString = dayOfMonth + "/" + month + "/" + year;
+            String dataString = String.format("%s/%s/%s", dayOfMonth, month, year);
             dataEvento.setText(dataString);
         };
 
