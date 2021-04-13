@@ -1,8 +1,10 @@
 package br.com.pucgo.atividade;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -12,6 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
+
+import br.com.pucgo.atividade.utils.SystemServiceUtil;
 
 public class SorteadorDeValores extends AppCompatActivity {
     Button sortear, voltar;
@@ -32,6 +36,8 @@ public class SorteadorDeValores extends AppCompatActivity {
         sortear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SystemServiceUtil.hideKeyboard(getCurrentFocus(), SorteadorDeValores.this);
+
                 int minimo = 0, maximo = 100;
                 boolean tem2Numeros, numeroOK;
                 tem2Numeros = true;
