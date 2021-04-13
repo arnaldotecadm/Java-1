@@ -1,70 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#EABF40">
 
-    <TextView
-        android:id="@+id/tituloRegistroDeEventos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Eventos"
-        android:textSize="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/black"></TextView>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/nomeEvento"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/tituloRegistroDeEventos"
-        android:textSize="20dp"
-        android:hint="Digite o nome do evento"
-        ></EditText>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EABF40">
 
-    <EditText
-        android:id="@+id/dataEvento"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textSize="20dp"
-        android:hint="Selecione a data"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/nomeEvento"
-        android:inputType="date"
-        ></EditText>
+        <TextView
+            android:id="@+id/tituloRegistroDeEventos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Eventos"
+            android:textColor="@color/black"
+            android:textSize="40dp"></TextView>
 
-    <Button
-        android:id="@+id/btnRegistrarEvento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registrar Evento"
-        android:layout_below="@+id/dataEvento"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"
-        android:textSize="10dp"
-        ></Button>
+        <EditText
+            android:id="@+id/nomeEvento"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloRegistroDeEventos"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:hint="Digite o nome do evento"
+            android:textSize="20dp"></EditText>
 
-    <ListView
-        android:id="@+id/eventos"
-        android:layout_width="wrap_content"
-        android:layout_height="380dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:layout_below="@id/btnRegistrarEvento"
-        ></ListView>
+        <EditText
+            android:id="@+id/dataEvento"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nomeEvento"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:hint="Selecione a data"
+            android:inputType="date"
+            android:textSize="20dp"></EditText>
 
-    <Button
-        android:id="@+id/btnVoltarEvento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Voltar"
-        android:layout_below="@+id/eventos"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"
-        android:textSize="10dp"
-        ></Button>
+        <Button
+            android:id="@+id/btnRegistrarEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dataEvento"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Registrar Evento"
+            android:textSize="10dp"></Button>
 
-</RelativeLayout>
+        <ListView
+            android:id="@+id/eventos"
+            android:layout_width="wrap_content"
+            android:layout_height="380dp"
+            android:layout_below="@id/btnRegistrarEvento"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"></ListView>
+
+        <Button
+            android:id="@+id/btnVoltarEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventos"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Voltar"
+            android:textSize="10dp"></Button>
+
+    </RelativeLayout>
+</ScrollView>

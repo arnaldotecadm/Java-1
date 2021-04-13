@@ -43,6 +43,7 @@ public class RegistroDeEventos extends AppCompatActivity {
         // Isso aqui faz a magica da ligacao entre componente da tela e as propriedades
         ButterKnife.bind(this);
 
+
         ArrayList<Evento> eventosRegistrados = new ArrayList<>();
         //eventosRegistrados.add(new Evento(1, "Aula 1", "01/02/2000"));
         //eventosRegistrados.add(new Evento(2, "Aula 2", "02/02/2000"));
@@ -54,14 +55,20 @@ public class RegistroDeEventos extends AppCompatActivity {
          * visto que so possui um metodo que precisamos implementar
          * o mesmo vale para os metodos que seguem esta logica
          */
-        registrarEvento.setOnClickListener( (view) -> {
-            if(!nomeEvento.getText().toString().isEmpty() && !dataEvento.getText().toString().isEmpty()){
+        registrarEvento.setOnClickListener((view) -> {
+            if (!nomeEvento.getText().toString().isEmpty() && !dataEvento.getText().toString().isEmpty()) {
                 int contador;
-                if(eventosRegistrados.isEmpty()){contador = 1;}
-                else{contador = eventosRegistrados.get(eventosRegistrados.size()-1).getContador()+1;}
+                if (eventosRegistrados.isEmpty()) {
+                    contador = 1;
+                } else {
+                    contador = eventosRegistrados.get(eventosRegistrados.size() - 1).getContador() + 1;
+                }
                 Evento evento = new Evento(contador, nomeEvento.getText().toString(), dataEvento.getText().toString());
                 eventosRegistrados.add(evento);
-            }else{
+                //Interessante para fazer o adaptador se atualizar no momento do click;
+                // Sem isso o adapter nao sabe que existem novos dados
+                adaptador.notifyDataSetChanged();
+            } else {
                 Toast.makeText(RegistroDeEventos.this, "Preencher dados do evento ", Toast.LENGTH_SHORT).show();
             }
         });
